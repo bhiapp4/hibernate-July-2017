@@ -23,6 +23,12 @@
 		<mapping class="com.hibernate.model.onetomany.Student" />
 		<mapping class="com.hibernate.model.onetomany.Topic" />
 		
+		<mapping class="com.hibernate.inheritance.Employee"/>
+		<mapping class="com.hibernate.inheritance.FullTimeEmployee"/>
+		<mapping class="com.hibernate.inheritance.ContractingEmployee"/>
+		
+		<mapping class="com.hibernate.composite.Author"/>
+		
 		
 
 	</session-factory>

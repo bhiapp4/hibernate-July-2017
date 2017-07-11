@@ -14,10 +14,24 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.NamedNativeQueries;
+import javax.persistence.NamedNativeQuery;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Version;
 
 import org.hibernate.validator.constraints.NotBlank;
 
+import com.hibernate.queries.NativeSqlMain;
+
+@NamedQueries({
+	@NamedQuery(name="findAllStudentsWithCourseCount",query="select s.fName,count(*) from Student s join s.courses c group by s.studentId")
+})
+
+@NamedNativeQueries({
+	@NamedNativeQuery(name="findAllStudentsWithCourseCountNatively",
+			query=NativeSqlMain.SQL)
+})
 @Entity
 public class Student {
 
