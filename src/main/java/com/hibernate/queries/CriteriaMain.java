@@ -22,7 +22,7 @@ public class CriteriaMain {
 
 	public static void main(String[] args) {
 		//getAllStudentsWithCriteria();
-		//findStudentsByLastName();
+		findStudentsByLastName();
 	}
 	
 	public static void getAllStudentsWithCriteria(){

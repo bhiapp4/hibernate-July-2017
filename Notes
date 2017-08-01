@@ -72,19 +72,10 @@ Mapping inheritance in hibernate -- SINGLE_TABLE, JOINED(Person(person propertie
 ---Advanced topics----
 -HQL Join queries
 -Hibernate entity life cycle - Transient state, persistent state(save,update,saveOrUpdate), detached state(session.close()) - deleted state(session.delete,delete hql)
-Validations in hibernate
+
+-Criteria queries - Up to v4, JPA has its own criteria api
+-Validations in hibernate
 -Locking in hibernate
 -Performing Caching(First level(Session), Second level(Session Factory), Query level(cache ur hql results- uses second level cache to store the resultset(key(city-jerseycity)-value(List of results))))
 -Auditing with Envers(@Audited and @NotAudited, rev types(0 -inserted,1-updated,2-deleted))
 -Creating inteceptors
-
---HW
-- Convert ur jdbc hw to hibernate
-- Create an exanple for inheritance(Single table and joined)
-- Create queries using session api(CRUD),HQL, Criteria API
-- Create a table in db with different column names than ur java member variable names
-- Create validation for one or two columns
-- Observe the lazy and eager fecthing
-- An example with different generation strategies
-- Course, topic, user -> relationships
-----Formatted, code guidelines, git repo

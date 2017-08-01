@@ -2,10 +2,10 @@ package com.hibernate.queries;
 
 import java.util.List;
 
-import javax.persistence.Query;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 
 import com.hibernate.model.onetomany.Course;
 import com.hibernate.model.onetomany.Student;
@@ -27,7 +27,8 @@ public class HqlMain {
 	public static void getAllStudents(){
 		SessionFactory sf = HibernateUtil.getSessionFactory();
 		Session session = sf.openSession();
-		Query query =session.createQuery("from Student");
+		Query<Student> query =session.createQuery("from Student");
+		query.setCacheable(true);
 		List<Student> studentList = query.getResultList();
 		System.out.println(studentList.size());
 		session.close();

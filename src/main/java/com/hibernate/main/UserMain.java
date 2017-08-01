@@ -13,16 +13,16 @@ public class UserMain {
 		SessionFactory sf = HibernateUtil.getSessionFactory();
 		Session s = sf.openSession();
 		Transaction tran = s.beginTransaction();
-		//User user = new User();
-		////user.setUserName("bhiapp4@gmail.com");
-		//s.save(user);
-		//tran.commit();
-		User user = s.get(User.class, 1L);
+		User user = new User();
+		user.setUserName("bhiapp414@gmail.com");
+		s.save(user);
+		tran.commit();
+		//User user = s.get(User.class, 1L);
 		//User user = s.get(User.class, 1L);
 		//System.out.println(user.getUserName());
 		//user.setUserName("bh1@gmail.com");
 		//s.update(user);
-		tran.commit();
+		//tran.commit();
 		s.close();
 		sf.close();
 	}
